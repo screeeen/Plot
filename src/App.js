@@ -2,6 +2,7 @@
 import './App.css';
 // import { Chart } from './ChartExample'
 import Bar from './Bar'
+import { PlacesBar } from './PlacesBar'
 import React, { useState, useEffect, useRef } from 'react';
 import * as d3 from 'd3';
 import street from './data/street.csv'
@@ -17,6 +18,12 @@ function App() {
   const [onlinePlot, setOnlinePlot] = useState(null);
   const [dataPlot, setDataPlot] = useState(null);
 
+  const width = 960;
+  const height = 600;
+  const top = 20;
+  const bottom = 180;
+  const left = 60;
+  const right = 0;
 
   useEffect(() => {
     const readData = async () => (
@@ -35,49 +42,73 @@ function App() {
     );
 
     readData();
+
+    //format
+    // const ocu = dataPlot.map(d => dataPlot.filter(x => x.Years === d.Years).length);
+    // const newData = dataPlot;
+    // newData.forEach((d, i) => { d['ocurrences'] = ocu[i] });
+    // const sortedData = newData.sort((a, b) => a.Years - b.Years);
+
+    // const OriginOcu = sortedData.map(d => sortedData.filter(x => x.Origin === d.Origin).length);
+    // newData.forEach((d, i) => { d['ocurrencesOrigin'] = OriginOcu[i] });
+    // console.log('newData', newData);
+    // setDataPlot(newData)
+
+
+
   }, []);
 
   return (
     <div ref={ref}>
+      {dataPlot &&
+        <PlacesBar
+          data={dataPlot}
+          width={width}
+          height={height}
+          top={top}
+          bottom={bottom}
+          left={left}
+          right={right}
+        />}
       {streetPlot &&
         <Bar
           data={streetPlot}
-          width={600}
-          height={600}
-          top={20}
-          bottom={180}
-          left={30}
-          right={0}
+          width={width}
+          height={height}
+          top={top}
+          bottom={bottom}
+          left={left}
+          right={right}
         />}
       {miniPlot &&
         <Bar
           data={miniPlot}
-          width={600}
-          height={600}
-          top={20}
-          bottom={180}
-          left={30}
-          right={0}
+          width={width}
+          height={height}
+          top={top}
+          bottom={bottom}
+          left={left}
+          right={right}
         />}
       {onlinePlot &&
         <Bar
-          data={dataPlot}
-          width={600}
-          height={600}
-          top={20}
-          bottom={180}
-          left={30}
-          right={0}
+          data={onlinePlot}
+          width={width}
+          height={height}
+          top={top}
+          bottom={bottom}
+          left={left}
+          right={right}
         />}
       {dataPlot &&
         <Bar
           data={dataPlot}
-          width={600}
-          height={600}
-          top={20}
-          bottom={180}
-          left={30}
-          right={0}
+          width={width}
+          height={height}
+          top={top}
+          bottom={bottom}
+          left={left}
+          right={right}
         />}
     </div>
   );
