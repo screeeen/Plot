@@ -19,11 +19,11 @@ export const Chart = () => {
 
         )
         readData();
-        console.log(data)
+        // console.log(data)
     }, [])
 
 
-    console.log(ref.current);
+    // console.log(ref.current);
     ref.current && d3.select(ref.current)
         .data(data)
         // // .enter()

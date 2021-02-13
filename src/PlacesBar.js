@@ -40,12 +40,11 @@ export const PlacesBar = ({ data, width, height, top, bottom, left, right }) => 
 
     //format
     const lowercaseOrigins = dataPlot.map(d => d.Origin.toLowerCase());
-    console.log(lowercaseOrigins)
+    // console.log(lowercaseOrigins)
     const newData = dataPlot;
     const OriginOcu = dataPlot.map(d => dataPlot.filter(x => x.Origin === d.Origin).length);
     newData.forEach((d, i) => { d['ocurrencesOrigin'] = OriginOcu[i] });
     newData.forEach((d, i) => { d.Origin = lowercaseOrigins[i] });
-    // console.log('newData', newData);
 
     const x = d3
         .scaleBand()

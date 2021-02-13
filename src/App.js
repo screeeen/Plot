@@ -3,12 +3,14 @@ import './App.css';
 // import { Chart } from './ChartExample'
 import Bar from './Bar'
 import { PlacesBar } from './PlacesBar'
+import { WinnersBar } from './WinnersBar'
 import React, { useState, useEffect, useRef } from 'react';
 import * as d3 from 'd3';
 import street from './data/street.csv'
 import mini from './data/mini.csv'
 import online from './data/online.csv'
 import dataT from './data/dataT.csv'
+import dataWinners from './data/ganadores.csv'
 
 
 function App() {
@@ -17,6 +19,7 @@ function App() {
   const [miniPlot, setMiniPlot] = useState(null);
   const [onlinePlot, setOnlinePlot] = useState(null);
   const [dataPlot, setDataPlot] = useState(null);
+  const [winnersPlot, setDataWinners] = useState(null);
 
   const width = 960;
   const height = 600;
@@ -38,6 +41,10 @@ function App() {
       }),
       d3.csv(dataT).then(function (data) {
         setDataPlot(data)
+      }),
+      d3.csv(dataWinners).then(function (data) {
+        console.log(data)
+        setDataWinners(data)
       })
     );
 
@@ -54,12 +61,20 @@ function App() {
     // console.log('newData', newData);
     // setDataPlot(newData)
 
-
-
   }, []);
 
   return (
     <div ref={ref}>
+      {winnersPlot &&
+        <WinnersBar
+          data={winnersPlot}
+          width={width}
+          height={height}
+          top={top}
+          bottom={bottom}
+          left={left}
+          right={right}
+        />}
       {dataPlot &&
         <PlacesBar
           data={dataPlot}
