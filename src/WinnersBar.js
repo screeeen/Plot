@@ -31,7 +31,6 @@ const Rect = ({ data, x, y, height, top, bottom }) => {
 
 export const WinnersBar = ({ data, width, height, top, bottom, left, right }) => {
 
-
     console.log('data',data)
 
     const [sort] = useState(true);
@@ -42,11 +41,19 @@ export const WinnersBar = ({ data, width, height, top, bottom, left, right }) =>
         ? [...data].sort((a, b) => b.Year - a.Year)
         : [...data];
 
+    const names = Object.keys(dataPlot[dataPlot.length-1]);
+    names.splice(0,1)
+    names.splice(13,1)
+    console.log('hey', names)
+    console.log('hey', width - left - right)
+    
+
     const x = d3
         .scaleBand()
-        .range([0, width - left - right])
-        .domain(dataPlot.map(d => d.Origin))
+        .range([10, width - left - right])
+        .domain(names.map(d => d))
         .padding(0.1)
+
 
     const y = d3
         .scaleLinear()
@@ -117,20 +124,17 @@ const XAxis = ({ top, bottom, left, right, height, scale }) => {
     const axis = useRef(null);
 
     useEffect(() => {
-        d3.select(axis.current).call(d3.axisBottom(scale)).selectAll('text').style("text-anchor", "end")
+        d3.select(axis.current).call(d3.axisBottom(scale).ticks(3).tickSize(-height, 0, 0))
+        .selectAll('text').style("text-anchor", "end")
             .attr("dx", "-.8em")
             .attr("dy", ".15em")
             .attr("transform", function (d) {
-                return "rotate(-65)"
+                return "rotate(-90)"
             });
     });
 
     return (
-        <g
-            className="axis x"
-            ref={axis}
-            transform={`translate(${left}, ${height - bottom})`}
-        />
+        <g className="axis x" ref={axis} transform={`translate(${left}, ${height - bottom})`} />
     );
 };
 
@@ -139,9 +143,9 @@ const YAxis = ({ top, bottom, left, right, width, scale }) => {
 
     useEffect(() => {
         d3.select(axis.current).call(d3.axisLeft(scale)
-            .tickSize(-width, 0, 0)
+        .ticks(20)
+            // .tickSize(-width, 0, 0)
             .tickFormat(d3.format("d")));
-
     });
 
     return (

@@ -75,7 +75,7 @@ function App() {
           left={left}
           right={right}
         />}
-      {dataPlot &&
+      {/* {dataPlot &&
         <PlacesBar
           data={dataPlot}
           width={width}
@@ -124,7 +124,7 @@ function App() {
           bottom={bottom}
           left={left}
           right={right}
-        />}
+        />} */}
     </div>
   );
 }
