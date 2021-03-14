@@ -87,8 +87,17 @@ function App() {
 
   // }, []);
 
+const divStyle = {
+  color: 'blue',
+  background: 'smokewhite',
+  height: '100vh',
+  width: '100vw',
+  border: '1px solid black'
+};
+  
+
   return (
-    <div width="100%" height="300%" ref={ref}>
+    <div style={divStyle} ref={ref}>
     <Charti />
       {/* {winnersPlot &&
         <WinnersBar

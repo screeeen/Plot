@@ -34,7 +34,7 @@ import { ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, Responsive
 
 export const Charti = () => {
     return (
-    //   <ResponsiveContainer width="100%" height="100%">
+      <ResponsiveContainer>
         <ScatterChart
           width={400}
           height={400}
@@ -45,12 +45,12 @@ export const Charti = () => {
             left: 20,
           }}
         >
-          <CartesianGrid />
-          <XAxis type="number" dataKey="year" name="year" domain={[2001,2019]} />
-          <YAxis type="category" dataKey="winner" name="winner" />
+          <CartesianGrid horizontal={false}/>
+          <YAxis type="number" dataKey="year" name="year" domain={data.map(y=>y.year)} tickCount={19} interval={0}/>
+          <XAxis type="category" dataKey="winner" interval={-1}/>
           <Tooltip cursor={{ strokeDasharray: '3 3' }} />
           <Scatter name="competition" data={data} fill="#8884d8" />
         </ScatterChart>
-    //   </ResponsiveContainer>
+        </ResponsiveContainer>
     );
   }
