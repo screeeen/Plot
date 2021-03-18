@@ -1,56 +1,56 @@
 export const skateMen = [
-	{year: 2001, index: 1, skateMen:  "Pay Álvarez (ESP)"},
-	{year: 2002, index: 1, skateMen:  "Adrian Otero (ESP)"},
-	{year: 2003, index: 1, skateMen:  "Raphael Brunis (FRA)"},
-	{year: 2004, index: 1, skateMen:  "Marcos Chami (ARG)"},
-	{year: 2005, index: 1, skateMen:  "David Lougedo (ESP)"},
-	{year: 2006, index: 1, skateMen:  "Orlando Acosta (ESP)"},
-	{year: 2007, index: 1, skateMen:  "Milton Martínez (ARG)"},
-	{year: 2008, index: 1, skateMen:  "Milton Martínez (ARG)"},
-	{year: 2009, index: 1, skateMen:  "Roger Silva (BRA)"},
-	{year: 2010, index: 1, skateMen:  "Milton Martínez (ARG)"},
-	{year: 2011, index: 1, skateMen:  "Cristian Estrada (COL)"},
-	{year: 2012, index: 1, skateMen:  "Jorge Simoes (POR)"},
-	{year: 2013, index: 1, skateMen:  "Danny Leon (ESP)"},
-	{year: 2014, index: 1, skateMen:  "Kelvin Hoefler (BRA)"},
-	{year: 2015, index: 1, skateMen:  "Aurelien Giraud (FRA)"},
-	{year: 2016, index: 1, skateMen:  "Danny Leon (ESP)"},
-	{year: 2017, index: 1, skateMen:  "Aurelien Giraud (FRA)"},
-	{year: 2018, index: 1, skateMen:  "Gustavo Ribeiro (POR)"},
-	{year: 2019, index: 1, skateMen:  "Ivan Monteiro (BRA)}"},
+	{year: 2001, index: 1, value:  "Pay Álvarez (ESP)"},
+	{year: 2002, index: 1, value:  "Adrian Otero (ESP)"},
+	{year: 2003, index: 1, value:  "Raphael Brunis (FRA)"},
+	{year: 2004, index: 1, value:  "Marcos Chami (ARG)"},
+	{year: 2005, index: 1, value:  "David Lougedo (ESP)"},
+	{year: 2006, index: 1, value:  "Orlando Acosta (ESP)"},
+	{year: 2007, index: 1, value:  "Milton Martínez (ARG)"},
+	{year: 2008, index: 1, value:  "Milton Martínez (ARG)"},
+	{year: 2009, index: 1, value:  "Roger Silva (BRA)"},
+	{year: 2010, index: 1, value:  "Milton Martínez (ARG)"},
+	{year: 2011, index: 1, value:  "Cristian Estrada (COL)"},
+	{year: 2012, index: 1, value:  "Jorge Simoes (POR)"},
+	{year: 2013, index: 1, value:  "Danny Leon (ESP)"},
+	{year: 2014, index: 1, value:  "Kelvin Hoefler (BRA)"},
+	{year: 2015, index: 1, value:  "Aurelien Giraud (FRA)"},
+	{year: 2016, index: 1, value:  "Danny Leon (ESP)"},
+	{year: 2017, index: 1, value:  "Aurelien Giraud (FRA)"},
+	{year: 2018, index: 1, value:  "Gustavo Ribeiro (POR)"},
+	{year: 2019, index: 1, value:  "Ivan Monteiro (BRA)}"},
    ]
 
 export const skateFem = [
-		{year: "2013", index: 2, skateFem: "Eugenia Ginepro (ARG)"},
-		{year: "2014", index: 2, skateFem: "Pamela Rosa (BRA)"},
-		{year: "2015", index: 2, skateFem: "Leticia Bufoni (BRA)"},
-		{year: "2016", index: 2, skateFem: "Julia Brueckler (AUT)"},
-		{year: "2017", index: 2, skateFem: "Candy Jacobs (HOL)"},
-		{year: "2018", index: 2, skateFem: "Candy Jacobs (HOL)"},
-		{year: "2019", index: 2, skateFem: "Keet Oldenbeuving (HOL)"}
+		{year: "2013", index: 2, value: "Eugenia Ginepro (ARG)"},
+		{year: "2014", index: 2, value: "Pamela Rosa (BRA)"},
+		{year: "2015", index: 2, value: "Leticia Bufoni (BRA)"},
+		{year: "2016", index: 2, value: "Julia Brueckler (AUT)"},
+		{year: "2017", index: 2, value: "Candy Jacobs (HOL)"},
+		{year: "2018", index: 2, value: "Candy Jacobs (HOL)"},
+		{year: "2019", index: 2, value: "Keet Oldenbeuving (HOL)"}
 ]
 
 export const miniRamp = [
-		{year:"2016", index: 3, miniRamp: "Danny Leon (ESP)"},
-		{year:"2017", index: 3, miniRamp: "Aurelien Giraud (FRA)"},
-		{year:"2018", index: 3, miniRamp: "Jake Ilardi (USA)"},
-		{year:"2019", index: 3, miniRamp: "Danny Leon (ESP)}"}
+		{year:"2016", index: 3, value: "Danny Leon (ESP)"},
+		{year:"2017", index: 3, value: "Aurelien Giraud (FRA)"},
+		{year:"2018", index: 3, value: "Jake Ilardi (USA)"},
+		{year:"2019", index: 3, value: "Danny Leon (ESP)}"}
 	]
 	
 export const bmxParkMen = [
-		{year: "2007",index: 4, bmxParkMen: "Gabruel Mastragostino (ARG)"},
-		{year: "2008",index: 4, bmxParkMen: "Sergio Layos (ESP)"},
-		{year: "2009",index: 4, bmxParkMen: "Daniel Peñafiel (ESP)"},
-		{year: "2010",index: 4, bmxParkMen: "Sergio Layos (ESP)"},
-		{year: "2011",index: 4, bmxParkMen: "Daniel Peñafiel (ESP)"},
-		{year: "2012",index: 4, bmxParkMen: "Daniel Peñafiel (ESP)"},
-		{year: "2013",index: 4, bmxParkMen: "Daniel Dhers (VEN)"},
-		{year: "2014",index: 4, bmxParkMen: "Jonathan Camacho (COL)"},
-		{year: "2015",index: 4, bmxParkMen: "Daniel Dhers (VEN)"},
-		{year: "2016",index: 4, bmxParkMen: "Konstantin Andreev (RUS)"},
-		{year: "2017",index: 4, bmxParkMen: "Jonathan Camacho (COL)"},
-		{year: "2018",index: 4, bmxParkMen: "Daniel Dhers (VEN)"},
-		{year: "2019",index: 4, bmxParkMen: "Sergio Layos (ESP)"}
+		{year: "2007",index: 4, value: "Gabruel Mastragostino (ARG)"},
+		{year: "2008",index: 4, value: "Sergio Layos (ESP)"},
+		{year: "2009",index: 4, value: "Daniel Peñafiel (ESP)"},
+		{year: "2010",index: 4, value: "Sergio Layos (ESP)"},
+		{year: "2011",index: 4, value: "Daniel Peñafiel (ESP)"},
+		{year: "2012",index: 4, value: "Daniel Peñafiel (ESP)"},
+		{year: "2013",index: 4, value: "Daniel Dhers (VEN)"},
+		{year: "2014",index: 4, value: "Jonathan Camacho (COL)"},
+		{year: "2015",index: 4, value: "Daniel Dhers (VEN)"},
+		{year: "2016",index: 4, value: "Konstantin Andreev (RUS)"},
+		{year: "2017",index: 4, value: "Jonathan Camacho (COL)"},
+		{year: "2018",index: 4, value: "Daniel Dhers (VEN)"},
+		{year: "2019",index: 4, value: "Sergio Layos (ESP)"}
 ]
 	
 export const bmxParkFem = [
