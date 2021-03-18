@@ -54,87 +54,87 @@ export const bmxParkMen = [
 ]
 	
 export const bmxParkFem = [
-		{year: "2016", index: 5, bmxParkFem: "Katty Diaz (VEN)"},
-		{year: "2017", index: 5, bmxParkFem: "Camila Harambour (CHI)"},
-		{year: "2018", index: 5, bmxParkFem: "Teresa Fernández (ESP)"},
-		{year: "2019", index: 5, bmxParkFem: "Lara Lessmann (GER)"}
+		{year: "2016", index: 5, value: "Katty Diaz (VEN)"},
+		{year: "2017", index: 5, value: "Camila Harambour (CHI)"},
+		{year: "2018", index: 5, value: "Teresa Fernández (ESP)"},
+		{year: "2019", index: 5, value: "Lara Lessmann (GER)"}
 ]
 export const bmxStreet = [
-		{year:"2017", index:6, bmxStreet: "Broc Raiford (USA)"},
-		{year:"2018", index:6, bmxStreet: "Courage Adams (ESP)"},
-		{year:"2019", index:6, bmxStreet: "Courage Adams (ESP)"}
+		{year:"2017", index:6, value: "Broc Raiford (USA)"},
+		{year:"2018", index:6, value: "Courage Adams (ESP)"},
+		{year:"2019", index:6, value: "Courage Adams (ESP)"}
 ]
 	
 export const bmxFlatland =[
-		{year:"2007",index:7, bmxFlatland:"Viki Gómez (ESP)"},
-		{year:"2008",index:7, bmxFlatland:"Viki Gómez (ESP)"},
-		{year:"2009",index:7, bmxFlatland:""},
-		{year:"2010",index:7, bmxFlatland:"Matthias Dandois (FRA)"},
-		{year:"2011",index:7, bmxFlatland:"Matthias Dandois (FRA)"},
-		{year:"2012",index:7, bmxFlatland:"Matthias Dandois (FRA)"},
-		{year:"2013",index:7, bmxFlatland:"Matthias Dandois (FRA)"},
-		{year:"2014",index:7, bmxFlatland:"Viki Gómez (ESP)"},
-		{year:"2015",index:7, bmxFlatland:"Matthias Dandois (FRA)"},
-		{year:"2016",index:7, bmxFlatland:"Alex Jumelin (FRA)"},
-		{year:"2017",index:7, bmxFlatland:"Viki Gómez (ESP)"},
-		{year:"2018",index:7, bmxFlatland:"Viki Gómez (ESP)"},
-		{year:"2019",index:7, bmxFlatland:"Alberto Moya (ESP)"}
+		{year:"2007",index:7, value:"Viki Gómez (ESP)"},
+		{year:"2008",index:7, value:"Viki Gómez (ESP)"},
+		{year:"2009",index:7, value:""},
+		{year:"2010",index:7, value:"Matthias Dandois (FRA)"},
+		{year:"2011",index:7, value:"Matthias Dandois (FRA)"},
+		{year:"2012",index:7, value:"Matthias Dandois (FRA)"},
+		{year:"2013",index:7, value:"Matthias Dandois (FRA)"},
+		{year:"2014",index:7, value:"Viki Gómez (ESP)"},
+		{year:"2015",index:7, value:"Matthias Dandois (FRA)"},
+		{year:"2016",index:7, value:"Alex Jumelin (FRA)"},
+		{year:"2017",index:7, value:"Viki Gómez (ESP)"},
+		{year:"2018",index:7, value:"Viki Gómez (ESP)"},
+		{year:"2019",index:7, value:"Alberto Moya (ESP)"}
 ]
 	
 export const mtbDowntownMen = [
-		{year:"2010",index:8, mtbDowntownMen: "Paulo Domingues (POR)"},
-		{year:"2011",index:8, mtbDowntownMen: "Aaron Caballero (ESP)"},
-		{year:"2012",index:8, mtbDowntownMen: "José Borges (POR)"},
-		{year:"2013",index:8, mtbDowntownMen: "José Borges (POR)"},
-		{year:"2014",index:8, mtbDowntownMen: "José Borges (POR)"},
-		{year:"2015",index:8, mtbDowntownMen: "Aaron Caballero (ESP)"},
-		{year:"2016",index:8, mtbDowntownMen: "José Borges (POR)"},
-		{year:"2017",index:8, mtbDowntownMen: "Edgar Carballo (ESP)"},
-		{year:"2018",index:8, mtbDowntownMen: "Marco Veiga (ESP)"},
-		{year:"2019",index:8, mtbDowntownMen: "Edgar Carballo (ESP)"}
+		{year:"2010",index:8, value: "Paulo Domingues (POR)"},
+		{year:"2011",index:8, value: "Aaron Caballero (ESP)"},
+		{year:"2012",index:8, value: "José Borges (POR)"},
+		{year:"2013",index:8, value: "José Borges (POR)"},
+		{year:"2014",index:8, value: "José Borges (POR)"},
+		{year:"2015",index:8, value: "Aaron Caballero (ESP)"},
+		{year:"2016",index:8, value: "José Borges (POR)"},
+		{year:"2017",index:8, value: "Edgar Carballo (ESP)"},
+		{year:"2018",index:8, value: "Marco Veiga (ESP)"},
+		{year:"2019",index:8, value: "Edgar Carballo (ESP)"}
 ]
 export const mtbDowntownFem = [
-		{year:"2010",index:9, mtbDowntownFem:"Rosi Martínez (ESP)"},
-		{year:"2011",index:9, mtbDowntownFem:"Eva Castro (ESP)"},
-		{year:"2012",index:9, mtbDowntownFem:"Rosi Martínez (ESP)"},
-		{year:"2013",index:9, mtbDowntownFem:"Rosi Martínez (ESP)"},
-		{year:"2014",index:9, mtbDowntownFem:"Rosi Martínez (ESP)"},
-		{year:"2015",index:9, mtbDowntownFem:"Rosi Martínez (ESP)"},
-		{year:"2016",index:9, mtbDowntownFem:"Rosi Martínez (ESP)"},
-		{year:"2017",index:9, mtbDowntownFem:"Eva Castro (ESP)"},
-		{year:"2018",index:9, mtbDowntownFem:"Eva Castro (ESP)"},
-		{year:"2019",index:9, mtbDowntownFem:"Eva Castro (ESP)"}
+		{year:"2010",index:9, value:"Rosi Martínez (ESP)"},
+		{year:"2011",index:9, value:"Eva Castro (ESP)"},
+		{year:"2012",index:9, value:"Rosi Martínez (ESP)"},
+		{year:"2013",index:9, value:"Rosi Martínez (ESP)"},
+		{year:"2014",index:9, value:"Rosi Martínez (ESP)"},
+		{year:"2015",index:9, value:"Rosi Martínez (ESP)"},
+		{year:"2016",index:9, value:"Rosi Martínez (ESP)"},
+		{year:"2017",index:9, value:"Eva Castro (ESP)"},
+		{year:"2018",index:9, value:"Eva Castro (ESP)"},
+		{year:"2019",index:9, value:"Eva Castro (ESP)"}
 ]
 	
 export const fmbDirtJump =  [
-		{year: "2011", index: 10, fmbDirtJump: "Andreu Llacondeguy (ESP)"},
-		{year: "2012", index: 10, fmbDirtJump: "Xavier Pasamonte (ESP)"},
-		{year: "2013", index: 10, fmbDirtJump: "Nicholi Rogatkin (USA)"},
-		{year: "2014", index: 10, fmbDirtJump: "Nicholi Rogatkin (USA)"},
-		{year: "2015", index: 10, fmbDirtJump: "Nicholi Rogatkin (USA)"},
-		{year: "2016", index: 10, fmbDirtJump: "Paul Couderc (FRA)"},
-		{year: "2017", index: 10, fmbDirtJump: "Nicholi Rogatkin (USA)"},
-		{year: "2018", index: 10, fmbDirtJump: "Lukas Huppert (SUI)"},
-		{year: "2019", index: 10, fmbDirtJump: "Tom Isted (UK)"}
+		{year: "2011", index: 10, value: "Andreu Llacondeguy (ESP)"},
+		{year: "2012", index: 10, value: "Xavier Pasamonte (ESP)"},
+		{year: "2013", index: 10, value: "Nicholi Rogatkin (USA)"},
+		{year: "2014", index: 10, value: "Nicholi Rogatkin (USA)"},
+		{year: "2015", index: 10, value: "Nicholi Rogatkin (USA)"},
+		{year: "2016", index: 10, value: "Paul Couderc (FRA)"},
+		{year: "2017", index: 10, value: "Nicholi Rogatkin (USA)"},
+		{year: "2018", index: 10, value: "Lukas Huppert (SUI)"},
+		{year: "2019", index: 10, value: "Tom Isted (UK)"}
 ]
 export const breakDance =  [
-		{year:"2007", index: 11, breakDance:"Gaiolin Roots (POR)"},
-		{year:"2008", index: 11, breakDance:"Iron Skulls (ESP)"},
-		{year:"2009", index: 11, breakDance:"Lunatiks (ESP)"},
-		{year:"2010", index: 11, breakDance:"Fusion Rockers (ESP)"},
-		{year:"2011", index: 11, breakDance:"Barna Squad (ESP)"},
-		{year:"2012", index: 11, breakDance:"Fusion Rockers (ESP)"},
-		{year:"2013", index: 11, breakDance:"Fusion Rockers (ESP)"},
-		{year:"2014", index: 11, breakDance:"Fusion Rockers (ESP)"},
-		{year:"2015", index: 11, breakDance:"Momentum Crew (POR)"},
-		{year:"2016", index: 11, breakDance:"Malaganzters (ESP)"},
-		{year:"2017", index: 11, breakDance:"Fusion Rockers (ESP)"},
-		{year:"2018", index: 11, breakDance:"Zoo Evolution Kings (POR)"},
-		{year:"2019", index: 11, breakDance:"XVII Generation (ESP)"}
+		{year:"2007", index: 11, value:"Gaiolin Roots (POR)"},
+		{year:"2008", index: 11, value:"Iron Skulls (ESP)"},
+		{year:"2009", index: 11, value:"Lunatiks (ESP)"},
+		{year:"2010", index: 11, value:"Fusion Rockers (ESP)"},
+		{year:"2011", index: 11, value:"Barna Squad (ESP)"},
+		{year:"2012", index: 11, value:"Fusion Rockers (ESP)"},
+		{year:"2013", index: 11, value:"Fusion Rockers (ESP)"},
+		{year:"2014", index: 11, value:"Fusion Rockers (ESP)"},
+		{year:"2015", index: 11, value:"Momentum Crew (POR)"},
+		{year:"2016", index: 11, value:"Malaganzters (ESP)"},
+		{year:"2017", index: 11, value:"Fusion Rockers (ESP)"},
+		{year:"2018", index: 11, value:"Zoo Evolution Kings (POR)"},
+		{year:"2019", index: 11, value:"XVII Generation (ESP)"}
 ]
 export const basket3x3 = [
-		{year: "2018", index:12, basket3x3: "Basket Gijón (ESP)"},
-		{year: "2019", index:12, basket3x3: "Titans (ESP)"}
+		{year: "2018", index:12, value: "Basket Gijón (ESP)"},
+		{year: "2019", index:12, value: "Titans (ESP)"}
 ]
 
 
