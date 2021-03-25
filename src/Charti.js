@@ -3,6 +3,21 @@ import { ScatterChart, Scatter, XAxis, YAxis,ZAxis, Tooltip, ResponsiveContainer
 import * as data from './data/winners'
 
 
+const CustomTooltip = ({ active, payload, label }) => {
+  console.log(active, payload, label)
+  if (active && payload && payload.length) {
+    return (
+      <div className="custom-tooltip">
+        <p className="desc"></p>
+        <p className="label">{`${payload[2].value}`}</p>
+        <p className="label">{`${payload[1].value}`}</p>
+        {/* <p className="intro">{getIntroOfPage(label)}</p> */}
+      </div>
+    );
+  }
+  return null;
+};
+
 
 export const Charti = () => {
 
@@ -22,7 +37,7 @@ export const Charti = () => {
           <YAxis type="number" dataKey="year" domain={[2001,2019]}  tickCount={19} interval={0}/>
           <XAxis type="number" dataKey="index" label={{value:"sports in generral"}} />
           <ZAxis type="category" dataKey="value" interval={0}/>
-          <Tooltip cursor={{ strokeDasharray: '10 3' }} />
+          <Tooltip content={CustomTooltip} cursor={{ strokeDasharray: '10 3' }} />
           <Scatter name="skateMen" data={data.skateMen} fill="#8884d8" />
           <Scatter name="skateFem" data={data.skateFem} fill="#8884d8" />
           <Scatter name="miniRamp" data={data.miniRamp} fill="#8884d8" />
