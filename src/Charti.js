@@ -9,14 +9,31 @@ const CustomTooltip = ({ active, payload, label }) => {
     return (
       <div className="custom-tooltip">
         <p className="desc"></p>
-        <p className="label">{`${payload[2].value}`}</p>
         <p className="label">{`${payload[1].value}`}</p>
+        <p className="label">{`${payload[2].payload.sport}`}</p>
+        <p className="label">{`${payload[2].value}`}</p>
         {/* <p className="intro">{getIntroOfPage(label)}</p> */}
       </div>
     );
   }
   return null;
 };
+
+// const CustomImage = ({ active, payload, label }) => {
+//   console.log(active, payload, label)
+//   if (active && payload && payload.length) {
+//     return (
+//       <div className="custom-tooltip">
+//         <p className="desc"></p>
+//         <p className="label">{`${payload[1].value}`}</p>
+//         <p className="label">{`${payload[2].payload.sport}`}</p>
+//         <p className="label">{`${payload[2].value}`}</p>
+//         {/* <p className="intro">{getIntroOfPage(label)}</p> */}
+//       </div>
+//     );
+//   }
+//   return null;
+// };
 
 
 export const Charti = () => {
@@ -38,10 +55,10 @@ export const Charti = () => {
           <XAxis type="number" dataKey="index" label={{value:"sports in generral"}} />
           <ZAxis type="category" dataKey="value" interval={0}/>
           <Tooltip content={CustomTooltip} cursor={{ strokeDasharray: '10 3' }} />
-          <Scatter name="skateMen" data={data.skateMen} fill="#8884d8" />
-          <Scatter name="skateFem" data={data.skateFem} fill="#8884d8" />
-          <Scatter name="miniRamp" data={data.miniRamp} fill="#8884d8" />
-          <Scatter name="bmxParkMen" data={data.bmxParkMen} fill="#8884d8" />
+          <Scatter name="skateMen" data={data.skateMen} fill="#000" />
+          <Scatter name="skateFem" data={data.skateFem} fill="#f00" />
+          <Scatter name="miniRamp" data={data.miniRamp} fill="#0f0" />
+          <Scatter name="bmxParkMen" data={data.bmxParkMen} fill="#00f" />
           <Scatter name="bmxParkFem" data={data.bmxParkFem} fill="#8884d8" />
           <Scatter name="bmxParkFem" data={data.bmxStreet} fill="#8884d8" />
           <Scatter name="bmxParkFem" data={data.bmxFlatland} fill="#8884d8" />
