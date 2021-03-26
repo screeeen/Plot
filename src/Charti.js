@@ -1,10 +1,9 @@
 import React from 'react';
-import { ScatterChart, Scatter, XAxis, YAxis,ZAxis, Tooltip, ResponsiveContainer } from 'recharts';
+import { ScatterChart, Scatter, XAxis, YAxis,ZAxis, Tooltip, ResponsiveContainer, Legend } from 'recharts';
 import * as data from './data/winners'
 
 
 const CustomTooltip = ({ active, payload, label }) => {
-  console.log(active, payload, label)
   if (active && payload && payload.length) {
     return (
       <div className="custom-tooltip">
@@ -18,6 +17,12 @@ const CustomTooltip = ({ active, payload, label }) => {
   }
   return null;
 };
+
+const pic =()=> {
+  console.log('hello')
+  // return <img src='./data/pic'/>
+  return <p>haaay</p>
+}
 
 // const CustomImage = ({ active, payload, label }) => {
 //   console.log(active, payload, label)
@@ -35,9 +40,7 @@ const CustomTooltip = ({ active, payload, label }) => {
 //   return null;
 // };
 
-
 export const Charti = () => {
-
     return (
       <ResponsiveContainer>
         <ScatterChart
@@ -54,8 +57,9 @@ export const Charti = () => {
           <YAxis type="number" dataKey="year" domain={[2001,2019]}  tickCount={19} interval={0}/>
           <XAxis type="number" dataKey="index" label={{value:"sports in generral"}} />
           <ZAxis type="category" dataKey="value" interval={0}/>
-          <Tooltip content={CustomTooltip} cursor={{ strokeDasharray: '10 3' }} />
-          <Scatter name="skateMen" data={data.skateMen} fill="#000" />
+          <Tooltip content={CustomTooltip} cursor={{ strokeDasharray: '140 30' }} />
+          {/* <Legend /> */}
+          <Scatter name="skateMen" data={data.skateMen} />
           <Scatter name="skateFem" data={data.skateFem} fill="#f00" />
           <Scatter name="miniRamp" data={data.miniRamp} fill="#0f0" />
           <Scatter name="bmxParkMen" data={data.bmxParkMen} fill="#00f" />

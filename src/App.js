@@ -1,7 +1,7 @@
 import './App.css';
 import React, { useRef } from 'react';
 import {Charti} from './Charti'
-
+import {Movi} from './Movi'
 
 function App() {
   const ref = useRef();
@@ -16,7 +16,8 @@ const divStyle = {
 
   return (
     <div style={divStyle} ref={ref}>
-    <Charti />
+    {/* <Charti /> */}
+    <Movi />
     </div>
   );
 }
