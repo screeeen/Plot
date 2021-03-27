@@ -41,7 +41,10 @@ export const Movi = () => {
             {wins.reverse().map((year) => <div style={cell}>{year.year}</div>)}
         </div>
         <div style={column}>
-            {wins.map((year) => <div style={cell}>{year.skateMen}</div>)}
+            {wins.map((year) => <div style={cell}>
+                {/* {year.skateMen} */}
+                {generateImage(year.skateMenPic)}
+                </div>)}
         </div>
         <div style={column}>
             {wins.map((year) => <div style={cell}>{year.skateWomen}</div>)}
