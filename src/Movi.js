@@ -1,44 +1,44 @@
-import { autoType, gray } from 'd3';
-import React from 'react';
+import React, {useState,useEffect} from 'react';
 import {wins} from './data/winnersTable'
-
 
 
 export const Movi = () => {
 
-    console.log('hello', wins.year2001)
-    
     const grid = {
         height:'100vh',
         display: 'flex',
         alignItems: 'start',
         justifyContent: 'center',
-        marginTop: '20%',
-        // grid: 'repeat(19, 30px) / auto-flow ',
-        // border: '1px solid black',
+        margin: '10% 0 20% 0',
     }
     
     const column = {
-        // maxWidth: '60px',
-        // maxHeight: '60px',
         flexFlow: 'column',
-        // border: '1px solid gray',
     }
 
     const cell = {
         flexFlow: 'column',
-        borderBottom: '1px solid gray',
         padding: '10px',
         fontSize: '0.8em',
         color: 'gray',
-        width: '40px',
+        width: '60px',
         height: '40px',
     }
+
+    const imgSt = {
+        width: '100%'
+    }
+    
+    const generateImage = (url) => {
+        console.log('url', url);
+        return  url && <img style={imgSt} src={process.env.PUBLIC_URL + url} alt="*"/>;
+    }
+
     
     
     return ( <div style={grid}>
         <div style={column}>
-            {wins.map((year) => <div style={cell}>{year.year}</div>)}
+            {wins.reverse().map((year) => <div style={cell}>{year.year}</div>)}
         </div>
         <div style={column}>
             {wins.map((year) => <div style={cell}>{year.skateMen}</div>)}
@@ -74,7 +74,10 @@ export const Movi = () => {
             {wins.map((year) => <div style={cell}>{year.breakDance}</div>)}
         </div>
         <div style={column}>
-            {wins.map((year) => <div style={cell}>{year.basket3x3}</div>)}
+            {wins.map((year) => <div style={cell}>
+                {/* {year.basket3x3} */}
+                {generateImage(year.basket3x3pic)}
+                </div>)}
         </div>
         </div>)
     

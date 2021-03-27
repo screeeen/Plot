@@ -6,11 +6,7 @@ import {Movi} from './Movi'
 function App() {
   const ref = useRef();
 const divStyle = {
-  color: 'blue',
   background: 'smokewhite',
-  height: '100vh',
-  width: '100vw',
-  border: '1px solid black'
 };
   
 

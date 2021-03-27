@@ -24,22 +24,6 @@ const pic =()=> {
   return <p>haaay</p>
 }
 
-// const CustomImage = ({ active, payload, label }) => {
-//   console.log(active, payload, label)
-//   if (active && payload && payload.length) {
-//     return (
-//       <div className="custom-tooltip">
-//         <p className="desc"></p>
-//         <p className="label">{`${payload[1].value}`}</p>
-//         <p className="label">{`${payload[2].payload.sport}`}</p>
-//         <p className="label">{`${payload[2].value}`}</p>
-//         {/* <p className="intro">{getIntroOfPage(label)}</p> */}
-//       </div>
-//     );
-//   }
-//   return null;
-// };
-
 export const Charti = () => {
     return (
       <ResponsiveContainer>
