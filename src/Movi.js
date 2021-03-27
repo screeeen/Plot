@@ -1,3 +1,4 @@
+import { reverse } from 'd3';
 import React, {useState,useEffect} from 'react';
 import {wins} from './data/winnersTable'
 
@@ -17,16 +18,20 @@ export const Movi = () => {
     }
 
     const cell = {
+        display: 'flex',
         flexFlow: 'column',
-        padding: '10px',
+        padding: '20px',
         fontSize: '0.8em',
+        fontWeight: 'bold',
         color: 'gray',
         width: '60px',
         height: '40px',
+        borderRight: '1px solid gray',
+        
     }
 
     const imgSt = {
-        width: '100%'
+        width: '140%'
     }
     
     const generateImage = (url) => {
@@ -34,16 +39,36 @@ export const Movi = () => {
         return  url && <img style={imgSt} src={process.env.PUBLIC_URL + url} alt="*"/>;
     }
 
+    const generateCells = () => {
+        const reverseData = wins.reverse();
+        console.log('reverseData',reverseData)
+        
+        return reverseData.map((year) => {
+            return (
+                <>
+                <div style={column}>
+                    <div style={cell}>{year.year}</div>
+                </div>
+                <div style={column}>
+                    <div style={cell}>{year.skateMen}</div>
+                </div>
+                </>
+            )
+        });
+    }
+    
     
     
     return ( <div style={grid}>
-        <div style={column}>
+
+       {/* { generateCells()} */}
+       <div style={column}>
             {wins.reverse().map((year) => <div style={cell}>{year.year}</div>)}
         </div>
         <div style={column}>
             {wins.map((year) => <div style={cell}>
-                {/* {year.skateMen} */}
                 {generateImage(year.skateMenPic)}
+                {year.skateMen}
                 </div>)}
         </div>
         <div style={column}>
@@ -85,3 +110,4 @@ export const Movi = () => {
         </div>)
     
 }
+
