@@ -11,7 +11,7 @@ export const Movi = () => {
     //     setImmediate(reverseData);
     // },[])
 
-    const grid = {
+    const gridStyle = {
         height:'100vh',
         display: 'flex',
         alignItems: 'start',
@@ -20,11 +20,11 @@ export const Movi = () => {
         border: '1px solid blue'
     }
     
-    const column = {
+    const columnStyle = {
         flexFlow: 'column',
     }
 
-    const cell = {
+    const cellStyle = {
         display: 'flex',
         flexFlow: 'column',
         padding: '20%',
@@ -60,67 +60,70 @@ export const Movi = () => {
         console.log(info)
     }
 
+    const cell = (name,pic) => <div onMouseOver={()=>showTooltip(name)} style={cellStyle}>{generateImage(pic)}</div>
+    
+
     const generateCells = () => {
         console.log('reverseData',dataReversed)
             return (
                 <>
-                <div style={column}>
+                <div style={columnStyle}>
                     <div style={cellBlack}></div>
                     {dataReversed.map((year) => <div style={cellBlack}>{year.year}</div>)}
                 </div>
-                <div style={column}>
+                <div style={columnStyle}>
                     <div style={cellBlack}>Skateboarding</div>
-                    {dataReversed.map((year) => <div onMouseOver={()=>showTooltip(year.skateMen)} style={cell}>{generateImage(year.skateMenPic)}</div>)}
+                    {dataReversed.map((year) => cell(year.skateMen,year.skateMenPic))}
                 </div>
-                <div style={column}>
+                <div style={columnStyle}>
                     <div style={cellBlack}></div>
-                    {dataReversed.map((year) => <div style={cell}>{generateImage(year.skateWomenPic)}{year.skateWomen}</div>)}
+                    {dataReversed.map((year) => cell(year.skateWomen,year.skateWomenPic))}
                 </div>
-                <div style={column}>
+                <div style={columnStyle}>
                     <div style={cellBlack}>Mini Ramp </div>
-                    {dataReversed.map((year) => <div style={cell}>{generateImage(year.miniRampPic)}{year.miniramp}</div>)}
+                    {dataReversed.map((year) => cell(year.miniramp,year.miniRampPic))}
                 </div>
-                <div style={column}>
+                <div style={columnStyle}>
                     <div style={cellBlack}>BMX Park</div>
-                    {dataReversed.map((year) => <div style={cell}>{year.bmxParkMen}</div>)}
+                    {dataReversed.map((year) => cell(year.bmxParkMen,year.bmxParkMenPic))}
                 </div>
-                <div style={column}>
+                <div style={columnStyle}>
                     <div style={cellBlack}></div>
-                    {dataReversed.map((year) => <div style={cell}>{year.bmxParkWomen}</div>)}
+                    {dataReversed.map((year) => cell(year.bmxParkWomen,year.bmxParkWomenPic))}
                 </div>
-                <div style={column}>
+                <div style={columnStyle}>
                     <div style={cellBlack}>BMX Street</div>
-                    {dataReversed.map((year) => <div style={cell}>{year.bmxStreet}</div>)}
+                    {dataReversed.map((year) => cell(year.bmxStreet,year.bmxStreetPic))}
                 </div>
-                <div style={column}>
+                <div style={columnStyle}>
                     <div style={cellBlack}>Flat Land</div>
-                    {dataReversed.map((year) => <div style={cell}>{year.flatland}</div>)}
+                    {dataReversed.map((year) => cell(year.flatland,year.flatLandPic))}
                 </div>
-                <div style={column}>
+                <div style={columnStyle}>
                     <div style={cellBlack}>MTB Downtown</div>
-                    {dataReversed.map((year) => <div style={cell}>{year.mtbDowntownMen}</div>)}
+                    {dataReversed.map((year) => cell(year.mtbDowntownMen,year.mtbDowntownMenPic))}
                 </div>
-                <div style={column}>
+                <div style={columnStyle}>
                     <div style={cellBlack}></div>
-                    {dataReversed.map((year) => <div style={cell}>{year.mtbDowntownWomen}</div>)}
+                    {dataReversed.map((year) => cell(year.mtbDowntownWomen,year.mtbDowntownWomenPic))}
                 </div>
-                <div style={column}>
+                <div style={columnStyle}>
                     <div style={cellBlack}>FMB Dirt Jump</div>
-                    {dataReversed.map((year) => <div style={cell}>{year.fmbDirtJump}</div>)}
+                    {dataReversed.map((year) => cell(year.fmbDirtJump,year.fmbDirtJumpPic))}
                 </div>
-                <div style={column}>
+                <div style={columnStyle}>
                     <div style={cellBlack}>Break Dance</div>
-                    {dataReversed.map((year) => <div style={cell}>{year.breakDance}</div>)}
+                    {dataReversed.map((year) => cell(year.breakDance,year.breakDancePic))}
                 </div>
-                <div style={column}>
+                <div style={columnStyle}>
                     <div style={cellBlack}>Basket 3x3</div>
-                    {dataReversed.map((year) => <div style={cell}>{year.basket3x3}</div>)}
+                    {dataReversed.map((year) => cell(year.basket3x3,year.basket3x3Pic))}
                 </div>
                 </>
             )
     }
 
-    return ( <div style={grid}>
+    return ( <div style={gridStyle}>
        { generateCells()}
        {/* {old()} */}
         </div>)
