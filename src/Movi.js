@@ -61,8 +61,7 @@ export const Movi = () => {
 
     const imgSt = {
         width: '140%',
-        // -webkit-filter: 'grayscale(100%)', /* Safari 6.0 - 9.0 */
-        filter: 'grayscale(100%)'
+        filter: 'grayscale(100%) drop-shadow(2px 2px 1px gray)',
     }
     
     const generateImage = (url) => {
@@ -70,9 +69,7 @@ export const Movi = () => {
         return  url && <img style={imgSt} src={process.env.PUBLIC_URL + url} alt="*"/>;
     }
 
-    const showTooltip = (info) => {
-        console.log(info)
-    }
+    const showTooltip = (info) => console.log(info)
 
     const cell = (name,pic) => <div onMouseOver={()=>showTooltip(name)} style={cellStyle}>{generateImage(pic)}</div>
     
