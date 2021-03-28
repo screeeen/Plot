@@ -27,7 +27,7 @@ export const Movi = () => {
     const cellStyle = {
         display: 'flex',
         flexFlow: 'column',
-        padding: '20%',
+        padding: '30% 20%',
         fontSize: '0.8em',
         fontWeight: 'bold',
         color: 'gray',
@@ -35,6 +35,18 @@ export const Movi = () => {
         height: '40px',
         // borderRight: '1px solid gray',
     }
+    const cellYear = {
+        display: 'flex',
+        flexFlow: 'column',
+        padding: '30% 20%',
+        fontSize: '2em',
+        fontWeight: 'bold',
+        color: 'slateGray',
+        width: '60px',
+        height: '40px',
+        // borderRight: '1px solid gray',
+    }
+
     const cellBlack = {
         display: 'flex',
         flexFlow: 'column',
@@ -48,7 +60,9 @@ export const Movi = () => {
     }
 
     const imgSt = {
-        width: '140%'
+        width: '140%',
+        // -webkit-filter: 'grayscale(100%)', /* Safari 6.0 - 9.0 */
+        filter: 'grayscale(100%)'
     }
     
     const generateImage = (url) => {
@@ -69,7 +83,7 @@ export const Movi = () => {
                 <>
                 <div style={columnStyle}>
                     <div style={cellBlack}></div>
-                    {dataReversed.map((year) => <div style={cellBlack}>{year.year}</div>)}
+                    {dataReversed.map((year) => <div style={cellYear}>{year.year}</div>)}
                 </div>
                 <div style={columnStyle}>
                     <div style={cellBlack}>Skateboarding</div>
