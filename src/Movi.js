@@ -27,36 +27,40 @@ export const Movi = () => {
     const cellStyle = {
         display: 'flex',
         flexFlow: 'column',
-        padding: '30% 20%',
+        padding: '30% 0%',
         fontSize: '0.8em',
         fontWeight: 'bold',
         color: 'gray',
         width: '60px',
         height: '40px',
         // borderRight: '1px solid gray',
+        border: '1px solid gray',
+
     }
     const cellYear = {
         display: 'flex',
         flexFlow: 'column',
-        padding: '30% 20%',
-        fontSize: '2em',
+        padding: '30% 0%',
+        fontSize: '1em',
         fontWeight: 'bold',
         color: 'slateGray',
         width: '60px',
         height: '40px',
         // borderRight: '1px solid gray',
+        border: '1px solid blue',
+
     }
 
     const cellBlack = {
         display: 'flex',
         flexFlow: 'column',
-        padding: '20%',
+        padding: '30% 0%',
         fontSize: '0.8em',
         fontWeight: 'bold',
         color: 'black',
         width: '60px',
         height: '40px',
-        // borderBottom: '1px solid gray',
+        border: '1px solid gray',
     }
 
     const imgSt = {
