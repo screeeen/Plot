@@ -34,7 +34,7 @@ export const Movi = () => {
         width: '60px',
         height: '40px',
         // borderRight: '1px solid gray',
-        border: '1px solid gray',
+        // border: '1px solid gray',
 
     }
     const cellYear = {
@@ -55,16 +55,16 @@ export const Movi = () => {
         display: 'flex',
         flexFlow: 'column',
         padding: '30% 0%',
-        fontSize: '0.8em',
+        fontSize: '1.0em',
         fontWeight: 'bold',
-        color: 'black',
+        color: 'slateGray',
         width: '60px',
         height: '40px',
         border: '1px solid gray',
     }
 
     const imgSt = {
-        width: '140%',
+        width: '130%',
         filter: 'grayscale(100%) drop-shadow(2px 2px 1px gray)',
     }
     
