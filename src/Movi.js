@@ -56,6 +56,10 @@ export const Movi = () => {
         return  url && <img style={imgSt} src={process.env.PUBLIC_URL + url} alt="*"/>;
     }
 
+    const showTooltip = (info) => {
+        console.log(info)
+    }
+
     const generateCells = () => {
         console.log('reverseData',dataReversed)
             return (
@@ -66,7 +70,7 @@ export const Movi = () => {
                 </div>
                 <div style={column}>
                     <div style={cellBlack}>Skateboarding</div>
-                    {dataReversed.map((year) => <div style={cell}>{generateImage(year.skateMenPic)}{year.skateMen}</div>)}
+                    {dataReversed.map((year) => <div onMouseOver={()=>showTooltip(year.skateMen)} style={cell}>{generateImage(year.skateMenPic)}</div>)}
                 </div>
                 <div style={column}>
                     <div style={cellBlack}></div>
