@@ -17,7 +17,7 @@ export const Movi = () => {
         alignItems: 'start',
         justifyContent: 'center',
         margin: '10% 0 40% 0',
-        border: '1px solid blue'
+        // border: '1px solid blue'
     }
     
     const columnStyle = {
@@ -47,7 +47,7 @@ export const Movi = () => {
         width: '60px',
         height: '40px',
         // borderRight: '1px solid gray',
-        border: '1px solid blue',
+        // border: '1px solid blue',
 
     }
 
@@ -60,7 +60,7 @@ export const Movi = () => {
         color: 'slateGray',
         width: '60px',
         height: '40px',
-        border: '1px solid gray',
+        // border: '1px solid gray',
     }
 
     const imgSt = {
