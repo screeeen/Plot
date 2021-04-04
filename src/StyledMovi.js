@@ -28,13 +28,14 @@ export const Name = styled.div`
     z-index: 10; 
     background: black;
     color: white;
+    font-size: 0.6em;
 `;
 
 export const CellStyle = styled.div`
         display: flex;
         flex-flow: column;
         width: 20px;
-        height: 30px;
+        height: 60px;
         padding: 1px;
         font-size: 0.4em;
 
@@ -43,7 +44,7 @@ export const CellStyle = styled.div`
         /* BIG */
         @media(min-width: 768px) {
             width: 60px;
-            height: 40px;
+            height: 60px;
             padding: 6px;
             font-size: .8em;
             padding: 20px;
