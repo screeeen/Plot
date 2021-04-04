@@ -6,7 +6,7 @@ export const GridStyle = styled.div`
     align-items: start;
     justify-content: start;
     margin: 2%;
-    background: whitesmoke;
+    /* background: whitesmoke; */
 
     @media(min-width: 768px) {
         /* background: mediumseagreen;
@@ -22,13 +22,13 @@ export const ColumnStyle = styled.div`
 `;
 
 export const Name = styled.div`
-    flex-flow: 'column';
-    align-items: end;
-    /* justify-content: flex-end; */
-    z-index: 10; 
+    /* z-index: 10;  */
     background: black;
     color: white;
     font-size: 0.6em;
+    position: relative;
+    bottom: 10px;
+    padding: 5px;
 `;
 
 export const CellStyle = styled.div`
@@ -38,6 +38,7 @@ export const CellStyle = styled.div`
         height: 60px;
         padding: 1px;
         font-size: 0.4em;
+        background: ${props => props.color % 2 ? '#EDF8' : '' };
 
         /* border: 1px solid gray; */
 
@@ -46,8 +47,8 @@ export const CellStyle = styled.div`
             width: 60px;
             height: 60px;
             padding: 6px;
-            font-size: .8em;
-            padding: 20px;
+            font-size: 1em;
+            padding: 40px 20px;
 
             /* border: 1px solid gray; */
     }
