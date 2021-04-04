@@ -1,6 +1,6 @@
 import React, {useState,useEffect} from 'react';
 import {wins} from './data/winnersTable'
-import {GridStyle,ColumnStyle,CellYear,CellStyle,ImgSt} from './StyledMovi'
+import {GridStyle,ColumnStyle,Name,CellStyle,ImgSt} from './StyledMovi'
 
 export const Movi = () => {
 
@@ -15,7 +15,7 @@ export const Movi = () => {
     
     const showTooltip = (info) => console.log(info)
 
-    const cell = (year,name,pic) => <CellStyle key={year+Math.random()} onMouseOver={()=>showTooltip(name)}>{generateImage(pic)}</CellStyle>
+    const cell = (year,name,pic) => <CellStyle key={year+Math.random()} onMouseOver={()=>showTooltip(name)}>{generateImage(pic)}<Name>{name}</Name></CellStyle>
     
 
     const generateCells = () => {

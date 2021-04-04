@@ -21,6 +21,15 @@ export const ColumnStyle = styled.div`
     justify-content: start; 
 `;
 
+export const Name = styled.div`
+    flex-flow: 'column';
+    align-items: end;
+    /* justify-content: flex-end; */
+    z-index: 10; 
+    background: black;
+    color: white;
+`;
+
 export const CellStyle = styled.div`
         display: flex;
         flex-flow: column;
@@ -43,20 +52,21 @@ export const CellStyle = styled.div`
     }
 
     `;
-export const CellYear = styled.div`
-        display: flex;
-        flex-flow: column;
-        padding: 40% 10%;
-        font-size: 1em;
-        font-weight: bold;
-        color: slateGray;
-        @media(min-width: 768px) {
-            width: 60px;
-            height: 40px;
-            /* border: 1px solid gray; */
-            padding: 40% 10%;
-    }
-    `;
+
+// export const CellYear = styled.div`
+//         display: flex;
+//         flex-flow: column;
+//         padding: 40% 10%;
+//         font-size: 1em;
+//         font-weight: bold;
+//         color: slateGray;
+//         @media(min-width: 768px) {
+//             width: 60px;
+//             height: 40px;
+//             /* border: 1px solid gray; */
+//             padding: 40% 10%;
+//     }
+//     `;
 
 export const ImgSt = styled.img`
         width: 100%;
