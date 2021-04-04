@@ -13,7 +13,7 @@ export const Movi = () => {
 
     const generateImage = (url) => url && <ImgSt src={process.env.PUBLIC_URL + url} alt="*"/>;
     
-    const showTooltip = (info) => <h1>info</h1>
+    const showTooltip = (info) => console.log(info)
 
     const cell = (year,name,pic) => <CellStyle key={year+Math.random()} onMouseOver={()=>showTooltip(name)}>{generateImage(pic)}</CellStyle>
     
