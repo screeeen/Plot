@@ -55,6 +55,7 @@ export const CellStyle = styled.div`
 
 export const ImgSt = styled.img`
         height: 100%;
+        width:100%;
         filter: grayscale(100%) drop-shadow(2px 2px 1px gray);
         z-index: 1; 
 
