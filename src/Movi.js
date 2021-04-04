@@ -1,147 +1,86 @@
 import React, {useState,useEffect} from 'react';
 import {wins} from './data/winnersTable'
-
+import {GridStyle,ColumnStyle,CellYear,CellStyle,ImgSt} from './StyledMovi'
 
 export const Movi = () => {
 
-    const [dataReversed] = useState(wins.reverse());
+    const [dataReversed,setData] = useState(null);
 
-    // useEffect(()=>{
-    //     const reverseData = wins.reverse();
-    //     setImmediate(reverseData);
-    // },[])
+    useEffect(()=> {
+        const rev = wins.reverse();
+        setData(rev);
+    },[])
 
-    const gridStyle = {
-        height:'100vh',
-        display: 'flex',
-        alignItems: 'start',
-        justifyContent: 'center',
-        margin: '10% 0 40% 0',
-        // border: '1px solid blue'
-    }
+    const generateImage = (url) => url && <ImgSt src={process.env.PUBLIC_URL + url} alt="*"/>;
     
-    const columnStyle = {
-        flexFlow: 'column',
-    }
+    const showTooltip = (info) => <h1>info</h1>
 
-    const cellStyle = {
-        display: 'flex',
-        flexFlow: 'column',
-        padding: '30% 0%',
-        fontSize: '0.8em',
-        fontWeight: 'bold',
-        color: 'gray',
-        width: '60px',
-        height: '40px',
-        // borderRight: '1px solid gray',
-        // border: '1px solid gray',
-
-    }
-    const cellYear = {
-        display: 'flex',
-        flexFlow: 'column',
-        padding: '30% 0%',
-        fontSize: '1em',
-        fontWeight: 'bold',
-        color: 'slateGray',
-        width: '60px',
-        height: '40px',
-        // borderRight: '1px solid gray',
-        // border: '1px solid blue',
-
-    }
-
-    const cellBlack = {
-        display: 'flex',
-        flexFlow: 'column',
-        padding: '30% 0%',
-        fontSize: '1.0em',
-        fontWeight: 'bold',
-        color: 'slateGray',
-        width: '60px',
-        height: '40px',
-        // border: '1px solid gray',
-    }
-
-    const imgSt = {
-        width: '130%',
-        filter: 'grayscale(100%) drop-shadow(2px 2px 1px gray)',
-    }
-    
-    const generateImage = (url) => {
-        console.log('url', url);
-        return  url && <img style={imgSt} src={process.env.PUBLIC_URL + url} alt="*"/>;
-    }
-
-    const showTooltip = (info) => console.log(info)
-
-    const cell = (name,pic) => <div onMouseOver={()=>showTooltip(name)} style={cellStyle}>{generateImage(pic)}</div>
+    const cell = (year,name,pic) => <CellStyle key={year+Math.random()} onMouseOver={()=>showTooltip(name)}>{generateImage(pic)}</CellStyle>
     
 
     const generateCells = () => {
         console.log('reverseData',dataReversed)
             return (
                 <>
-                <div style={columnStyle}>
-                    <div style={cellBlack}></div>
-                    {dataReversed.map((year) => <div style={cellYear}>{year.year}</div>)}
-                </div>
-                <div style={columnStyle}>
-                    <div style={cellBlack}>Skateboarding</div>
-                    {dataReversed.map((year) => cell(year.skateMen,year.skateMenPic))}
-                </div>
-                <div style={columnStyle}>
-                    <div style={cellBlack}></div>
-                    {dataReversed.map((year) => cell(year.skateWomen,year.skateWomenPic))}
-                </div>
-                <div style={columnStyle}>
-                    <div style={cellBlack}>Mini Ramp </div>
-                    {dataReversed.map((year) => cell(year.miniramp,year.miniRampPic))}
-                </div>
-                <div style={columnStyle}>
-                    <div style={cellBlack}>BMX Park</div>
-                    {dataReversed.map((year) => cell(year.bmxParkMen,year.bmxParkMenPic))}
-                </div>
-                <div style={columnStyle}>
-                    <div style={cellBlack}></div>
-                    {dataReversed.map((year) => cell(year.bmxParkWomen,year.bmxParkWomenPic))}
-                </div>
-                <div style={columnStyle}>
-                    <div style={cellBlack}>BMX Street</div>
-                    {dataReversed.map((year) => cell(year.bmxStreet,year.bmxStreetPic))}
-                </div>
-                <div style={columnStyle}>
-                    <div style={cellBlack}>Flat Land</div>
-                    {dataReversed.map((year) => cell(year.flatland,year.flatLandPic))}
-                </div>
-                <div style={columnStyle}>
-                    <div style={cellBlack}>MTB Downtown</div>
-                    {dataReversed.map((year) => cell(year.mtbDowntownMen,year.mtbDowntownMenPic))}
-                </div>
-                <div style={columnStyle}>
-                    <div style={cellBlack}></div>
-                    {dataReversed.map((year) => cell(year.mtbDowntownWomen,year.mtbDowntownWomenPic))}
-                </div>
-                <div style={columnStyle}>
-                    <div style={cellBlack}>FMB Dirt Jump</div>
-                    {dataReversed.map((year) => cell(year.fmbDirtJump,year.fmbDirtJumpPic))}
-                </div>
-                <div style={columnStyle}>
-                    <div style={cellBlack}>Break Dance</div>
-                    {dataReversed.map((year) => cell(year.breakDance,year.breakDancePic))}
-                </div>
-                <div style={columnStyle}>
-                    <div style={cellBlack}>Basket 3x3</div>
-                    {dataReversed.map((year) => cell(year.basket3x3,year.basket3x3Pic))}
-                </div>
+                <ColumnStyle>
+                    <CellStyle></CellStyle>
+                    {dataReversed.map((year) => <CellStyle key={year.year}>{year.year}</CellStyle>)}
+                </ColumnStyle>
+                <ColumnStyle>
+                    <CellStyle>Sk8 Men</CellStyle>
+                    {dataReversed.map((year) => cell(year.year,year.skateMen,year.skateMenPic))}
+                </ColumnStyle>
+                <ColumnStyle>
+                    <CellStyle>Sk8 Women</CellStyle>
+                    {dataReversed.map((year) => cell(year.year,year.skateWomen,year.skateWomenPic))}
+                </ColumnStyle>
+                <ColumnStyle>
+                    <CellStyle>Mini Ramp</CellStyle>
+                    {dataReversed.map((year) => cell(year.year,year.miniramp,year.miniRampPic))}
+                </ColumnStyle>
+                <ColumnStyle>
+                    <CellStyle>BMX Park Men</CellStyle>
+                    {dataReversed.map((year) => cell(year.year,year.bmxParkMen,year.bmxParkMenPic))}
+                </ColumnStyle>
+                <ColumnStyle>
+                    <CellStyle>BMX Park Women</CellStyle>
+                    {dataReversed.map((year) => cell(year.year,year.bmxParkWomen,year.bmxParkWomenPic))}
+                </ColumnStyle>
+                <ColumnStyle>
+                    <CellStyle>BMX Street</CellStyle>
+                    {dataReversed.map((year) => cell(year.year,year.bmxStreet,year.bmxStreetPic))}
+                </ColumnStyle>
+                <ColumnStyle>
+                    <CellStyle>Flat Land</CellStyle>
+                    {dataReversed.map((year) => cell(year.year,year.flatland,year.flatLandPic))}
+                </ColumnStyle>
+                <ColumnStyle>
+                    <CellStyle>MTB Downtown Men</CellStyle>
+                    {dataReversed.map((year) => cell(year.year,year.mtbDowntownMen,year.mtbDowntownMenPic))}
+                </ColumnStyle>
+                <ColumnStyle>
+                    <CellStyle>MTB Downtown Women</CellStyle>
+                    {dataReversed.map((year) => cell(year.year,year.mtbDowntownWomen,year.mtbDowntownWomenPic))}
+                </ColumnStyle>
+                <ColumnStyle>
+                    <CellStyle>FMB Dirt Jump</CellStyle>
+                    {dataReversed.map((year) => cell(year.year,year.fmbDirtJump,year.fmbDirtJumpPic))}
+                </ColumnStyle>
+                <ColumnStyle>
+                    <CellStyle>Break Dance</CellStyle>
+                    {dataReversed.map((year) => cell(year.year,year.breakDance,year.breakDancePic))}
+                </ColumnStyle>
+                <ColumnStyle>
+                    <CellStyle>Basket 3x3</CellStyle>
+                    {dataReversed.map((year) => cell(year.year,year.basket3x3,year.basket3x3Pic))}
+                </ColumnStyle>
                 </>
             )
     }
 
-    return ( <div style={gridStyle}>
-       { generateCells()}
-       {/* {old()} */}
-        </div>)
+    return <GridStyle>{dataReversed && generateCells()}</GridStyle>
+       
+      
     
 }
 
