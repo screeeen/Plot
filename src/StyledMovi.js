@@ -59,8 +59,13 @@ export const TitleCell = styled(CellStyle)`
     height: 20px;
 `;
 export const ImgSt = styled.img`
-        height: 100%;
+        height: 80%;
         /* width: 100%; */
         filter: grayscale(100%) drop-shadow(2px 2px 1px gray);
         z-index: 1; 
+
+        @media(min-width: 768px) {
+            height: 100%;
+
+        }
     `;
