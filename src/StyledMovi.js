@@ -31,7 +31,7 @@ export const Name = styled.div`
     font-size: 0.6em;
     position: relative;
     bottom: 10px;
-    padding: 5px;
+    padding: 10px;
     z-index: 4; 
 
     }
@@ -39,35 +39,36 @@ export const Name = styled.div`
 export const CellStyle = styled.div`
         display: flex;
         flex-flow: column nowrap;
-        /* width: 20px; */
         height: 60px;
         padding: 20px;
-        width: 7.6%;
-        /* font-family: 'Open', sans-serif; */
-        
+        width: 7.6%;        
         font-size: 0.4em;
+        /* border: 1px solid black; */
+
+        /* YEAR */
         &:first-child{
             font-stretch: condensed;
             justify-content: center;
             font-family: 'Stint Ultra Condensed', cursive;
-            font-size: 3em;
+            font-size: 2em;
             padding: 0px;
 
         }
         /* BIG */
         @media(min-width: 768px) {
-            width: 80px;
-            height: 80px;
+            height: 100%;
+            min-width: 7.6%;        
             padding: 20px;
             font-size: 1em;
             z-index: -1; 
     }
     `;
 export const TitleCell = styled(CellStyle)`
-    word-break: break-all;
+    /* word-break: break-all; */
+    word-break: normal;
     height: 20px;
     font-family: 'Stint Ultra Condensed', cursive;
-    font-size: 1em;
+    /* font-size: 1.2em; */
 `;
 export const ImgSt = styled.img`
         height: 80%;
