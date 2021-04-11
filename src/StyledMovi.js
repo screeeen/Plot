@@ -8,6 +8,7 @@ export const GridStyle = styled.div`
     justify-content: start;
     margin: 1%;
     box-sizing:border-box;
+    width:800px !important;
 
     @media(min-width: 768px) {
         justify-content: center;
