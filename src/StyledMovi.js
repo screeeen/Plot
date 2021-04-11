@@ -5,7 +5,9 @@ export const GridStyle = styled.div`
     display: flex;
     flex-direction: column;
     align-items: start;
-    justify-content: start;
+    /* justify-content: start; */
+    justify-content: center;
+
     margin: 4%;
     width: 800px;
     box-sizing: border-box;
