@@ -38,9 +38,10 @@ export const CellStyle = styled.div`
         flex-flow: column nowrap;
         height: 60px;
         padding: 12px;
-        width: 7.6%;        
+        width: 7.6%;      
+        min-width: 7.6%;      
         font-size: 0.4em;
-        /* border: 1px solid gray; */
+        border: 1px solid lightgray;
 
         /* YEAR */
         &:first-child{
@@ -53,9 +54,9 @@ export const CellStyle = styled.div`
         }
         /* BIG */
         @media(min-width: 768px) {
-            /* height: 100%;
+            /* padding: 20px; */
+            height: 100%;
             min-width: 7.6%;        
-            padding: 20px; */
             font-size: 1em;
             z-index: -1; 
     }
