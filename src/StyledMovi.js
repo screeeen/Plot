@@ -6,14 +6,16 @@ export const GridStyle = styled.div`
     flex-direction: column;
     align-items: start;
     justify-content: start;
-    margin: 1%;
-    box-sizing:border-box;
-    width:800px !important;
+    margin: 4%;
+    width: 800px;
+    box-sizing: border-box;
 
+    /* BIG */
     @media(min-width: 768px) {
+        box-sizing:border-box;
         justify-content: center;
         margin: 10%;
-
+        width: 960px;
     }
     `;
 
