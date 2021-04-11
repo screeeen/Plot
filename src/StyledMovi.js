@@ -9,7 +9,7 @@ export const GridStyle = styled.div`
     justify-content: center;
 
     margin: 4%;
-    width: 800px;
+    /* width: 800px; */
     box-sizing: border-box;
 
     /* BIG */
@@ -17,7 +17,7 @@ export const GridStyle = styled.div`
         box-sizing:border-box;
         justify-content: center;
         margin: 10%;
-        width: 960px;
+        /* width: 960px; */
     }
     `;
 
