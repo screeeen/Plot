@@ -6,14 +6,16 @@ export const GridStyle = styled.div`
     flex-direction: column;
     align-items: start;
     justify-content: start;
-    margin: 2%;
-    /* background: whitesmoke; */
+    margin: 1%;
+    box-sizing:border-box;
+
     @media(min-width: 768px) {
-        /* background: mediumseagreen;
-        color: papayawhip; */
         justify-content: center;
+        margin: 10%;
+
     }
     `;
+
 export const RowStyle = styled.div`
     display: flex;
     flex-direction: row;
@@ -26,12 +28,7 @@ export const RowStyle = styled.div`
 
 export const Name = styled.div`
     @media(min-width: 768px) {
-    /* background: black; */
-    /* color: white; */
     font-size: 0.6em;
-    position: relative;
-    bottom: 10px;
-    padding: 10px;
     z-index: 4; 
 
     }
@@ -40,10 +37,10 @@ export const CellStyle = styled.div`
         display: flex;
         flex-flow: column nowrap;
         height: 60px;
-        padding: 20px;
+        padding: 12px;
         width: 7.6%;        
         font-size: 0.4em;
-        /* border: 1px solid black; */
+        /* border: 1px solid gray; */
 
         /* YEAR */
         &:first-child{
@@ -56,9 +53,9 @@ export const CellStyle = styled.div`
         }
         /* BIG */
         @media(min-width: 768px) {
-            height: 100%;
+            /* height: 100%;
             min-width: 7.6%;        
-            padding: 20px;
+            padding: 20px; */
             font-size: 1em;
             z-index: -1; 
     }
