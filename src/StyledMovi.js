@@ -1,4 +1,6 @@
 import styled from 'styled-components'
+
+
 export const GridStyle = styled.div`
     display: flex;
     flex-direction: column;
@@ -18,14 +20,14 @@ export const RowStyle = styled.div`
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    background: ${props => props.color % 2 ? '#EDF5' : '#EDF3' };
+    /* background: ${props => props.color % 2 ? '#EDF5' : '#EDF3' }; */
     z-index: -1; 
 `;
 
 export const Name = styled.div`
     @media(min-width: 768px) {
-    background: black;
-    color: white;
+    /* background: black; */
+    /* color: white; */
     font-size: 0.6em;
     position: relative;
     bottom: 10px;
@@ -39,17 +41,24 @@ export const CellStyle = styled.div`
         flex-flow: column nowrap;
         /* width: 20px; */
         height: 60px;
-        padding: 6px;
+        padding: 20px;
         width: 7.6%;
+        /* font-family: 'Open', sans-serif; */
+        
         font-size: 0.4em;
         &:first-child{
+            font-stretch: condensed;
             justify-content: center;
+            font-family: 'Stint Ultra Condensed', cursive;
+            font-size: 3em;
+            padding: 0px;
+
         }
         /* BIG */
         @media(min-width: 768px) {
-            width: 60px;
-            height: 60px;
-            padding: 6px;
+            width: 80px;
+            height: 80px;
+            padding: 20px;
             font-size: 1em;
             z-index: -1; 
     }
@@ -57,6 +66,8 @@ export const CellStyle = styled.div`
 export const TitleCell = styled(CellStyle)`
     word-break: break-all;
     height: 20px;
+    font-family: 'Stint Ultra Condensed', cursive;
+    font-size: 1em;
 `;
 export const ImgSt = styled.img`
         height: 80%;

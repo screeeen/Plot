@@ -1,6 +1,7 @@
 import React, {useState,useEffect} from 'react';
 import {wins} from './data/winnersTable'
 import {GridStyle,RowStyle,Name,CellStyle,ImgSt, TitleCell} from './StyledMovi'
+
 export const Movi = () => {
     const [dataReversed,setData] = useState(null);
     useEffect(()=> {
