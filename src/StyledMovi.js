@@ -1,24 +1,11 @@
 import styled from "styled-components";
 
 export const GridStyle = styled.div`
-  /* width: 800px; */
   display: flex;
   flex-direction: row;
   align-items: start;
-  /* justify-content: start; */
-  /* justify-content: center; */
-
-  margin: 4%;
-  /* width: 800px; */
   box-sizing: border-box;
-
-  /* BIG */
-  @media (min-width: 768px) {
-    box-sizing: border-box;
-    /* justify-content: center; */
-    /* margin: 10%; */
-    /* width: 960px; */
-  }
+  margin: 8%;
 `;
 
 export const ColumnStyle = styled.div`
@@ -26,42 +13,33 @@ export const ColumnStyle = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
   /* background: ${(props) => (props.color % 2 ? "#FFF" : "#EFF3")}; */
   z-index: -1;
 `;
 
-export const Name = styled.div`
-  @media (min-width: 768px) {
-    font-size: 0.6em;
-    z-index: 4;
-  }
-`;
 export const CellStyle = styled.div`
   display: flex;
   flex-flow: column nowrap;
-  height: 80px;
-  min-height: 120px;
+  height: 100%;
+  min-height: 60px;
+  min-width: 10px;
+  max-width: 20px;
   padding: 2px;
-  width: 60px;
-  /* width: 7.6%; */
-  /* min-width: 7.6%; */
   font-size: 0.4em;
-  /* border: 1px solid lightgray; */
 
   /* YEAR */
   &:first-child {
     font-stretch: condensed;
     justify-content: center;
     font-family: "Stint Ultra Condensed", cursive;
-    font-size: 2.5em;
-    padding: 0px;
+    font-size: 1.8em;
+    padding: 0px 0.1em;
   }
   /* BIG */
   @media (min-width: 768px) {
-    /* padding: 20px; */
     height: 100%;
-    min-width: 7.6%;
+    min-height: 120px;
+    max-width: 50px;
     font-size: 1em;
     z-index: -1;
   }
@@ -69,19 +47,26 @@ export const CellStyle = styled.div`
 export const TitleCell = styled(CellStyle)`
   /* word-break: break-all; */
   word-break: normal;
-  /* height: 230px; */
+  max-width: 400px;
   height: 80px;
   min-height: 120px;
   font-family: "Stint Ultra Condensed", cursive;
-  font-size: 2em;
+  font-size: 1.2em;
 `;
 export const ImgSt = styled.img`
-  height: 80%;
+  height: 60%;
   /* width: 100%; */
   filter: grayscale(100%) drop-shadow(2px 2px 1px gray);
   z-index: 1;
 
   @media (min-width: 768px) {
     height: 100%;
+  }
+`;
+
+export const Name = styled.div`
+  @media (min-width: 768px) {
+    font-size: 0.6em;
+    z-index: 4;
   }
 `;

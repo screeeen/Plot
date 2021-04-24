@@ -47,15 +47,15 @@ export const Movi = () => {
       <>
         <ColumnStyle color={0}>
           <TitleCell></TitleCell>
-          <TitleCell>Sk8 Men</TitleCell>
-          <TitleCell>Sk8 Women</TitleCell>
+          <TitleCell>Skateboarding Men</TitleCell>
+          <TitleCell>Skateboarding Women</TitleCell>
           <TitleCell>Mini Ramp</TitleCell>
-          <TitleCell>BMX Park Men</TitleCell>
-          <TitleCell>BMX Park Women</TitleCell>
+          <TitleCell>BMX Men</TitleCell>
+          <TitleCell>BMX Women</TitleCell>
           <TitleCell>BMX Street</TitleCell>
-          <TitleCell>Flat Land</TitleCell>
-          <TitleCell>MTB Down town Men</TitleCell>
-          <TitleCell>MTB Down town Women</TitleCell>
+          <TitleCell>FlatLand BMX</TitleCell>
+          <TitleCell>MTB Downtown Men</TitleCell>
+          <TitleCell>MTB Downtown Women</TitleCell>
           <TitleCell>FMB Dirt Jump</TitleCell>
           <TitleCell>Break Dance</TitleCell>
           <TitleCell>Basket 3x3</TitleCell>
@@ -73,15 +73,15 @@ export const Movi = () => {
         ))}
         <ColumnStyle color={0}>
           <TitleCell></TitleCell>
-          <TitleCell>Sk8 Men</TitleCell>
-          <TitleCell>Sk8 Women</TitleCell>
+          <TitleCell>Skateboarding Men</TitleCell>
+          <TitleCell>Skateboarding Women</TitleCell>
           <TitleCell>Mini Ramp</TitleCell>
-          <TitleCell>BMX Park Men</TitleCell>
-          <TitleCell>BMX Park Women</TitleCell>
+          <TitleCell>BMX Men</TitleCell>
+          <TitleCell>BMX Women</TitleCell>
           <TitleCell>BMX Street</TitleCell>
-          <TitleCell>Flat Land</TitleCell>
-          <TitleCell>MTB Down town Men</TitleCell>
-          <TitleCell>MTB Down town Women</TitleCell>
+          <TitleCell>FlatLand BMX</TitleCell>
+          <TitleCell>MTB Downtown Men</TitleCell>
+          <TitleCell>MTB Downtown Women</TitleCell>
           <TitleCell>FMB Dirt Jump</TitleCell>
           <TitleCell>Break Dance</TitleCell>
           <TitleCell>Basket 3x3</TitleCell>
