@@ -5,7 +5,7 @@ export const GridStyle = styled.div`
   flex-direction: row;
   align-items: start;
   box-sizing: border-box;
-  margin: 8%;
+  margin: 1%;
 `;
 
 export const ColumnStyle = styled.div`
@@ -54,7 +54,7 @@ export const TitleCell = styled(CellStyle)`
   font-size: 1.2em;
 `;
 export const ImgSt = styled.img`
-  height: 60%;
+  max-height: 60%;
   /* width: 100%; */
   filter: grayscale(100%) drop-shadow(2px 2px 1px gray);
   z-index: 1;
