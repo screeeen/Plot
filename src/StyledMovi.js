@@ -34,6 +34,8 @@ export const CellStyle = styled.div`
     font-family: "Stint Ultra Condensed", cursive;
     font-size: 1.8em;
     padding: 0px 0.1em;
+    min-width: 40px;
+    color: turquoise;
   }
   /* BIG */
   @media (min-width: 768px) {
