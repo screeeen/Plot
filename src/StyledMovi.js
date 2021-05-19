@@ -23,8 +23,8 @@ export const CellStyle = styled.div`
   height: 100%;
   min-height: 60px;
   max-height: 80px;
-  min-width: 10px;
-  max-width: 20px;
+  /* min-width: 10px;
+  max-width: 20px; */
   padding: 2px;
   font-size: 0.4em;
 
@@ -36,7 +36,7 @@ export const CellStyle = styled.div`
     font-size: 1.8em;
     padding: 0px 0.1em;
     min-width: 40px;
-    color: turquoise;
+    color: red;
   }
   /* BIG */
   @media (min-width: 768px) {
@@ -57,8 +57,9 @@ export const TitleCell = styled(CellStyle)`
   font-size: 1.2em;
 `;
 export const ImgSt = styled.img`
-  max-height: 60%;
+  max-height: 100px;
   /* width: 100%; */
+  background-color: red;
   filter: grayscale(100%) drop-shadow(2px 2px 1px gray);
   z-index: 1;
 
