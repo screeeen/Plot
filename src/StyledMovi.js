@@ -22,6 +22,7 @@ export const CellStyle = styled.div`
   flex-flow: column nowrap;
   height: 100%;
   min-height: 60px;
+  max-height: 80px;
   min-width: 10px;
   max-width: 20px;
   padding: 2px;
