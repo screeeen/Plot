@@ -767,7 +767,7 @@ export const wins = [
     bmxParkWomenPic: "",
     bmxParkMenPic: "",
     miniRampPic: "",
-    skateWomenPic: "",
+    skateWomenPic: "/images/corey_bug.png",
     skateMenPic: "/images/corey_bug.png",
     basket3x3: "",
     breakDance: "",

@@ -6,6 +6,7 @@ export const GridStyle = styled.div`
   align-items: start;
   box-sizing: border-box;
   margin: auto 1%;
+  margin-top: 200px;
 `;
 
 export const CellStyle = styled.div`
@@ -17,7 +18,7 @@ export const CellStyle = styled.div`
 `;
 
 export const ImgSt = styled.img`
-  width: 60%;
+  width: 60px;
   filter: grayscale(100%) drop-shadow(2px 2px 1px gray);
   z-index: 1;
 `;

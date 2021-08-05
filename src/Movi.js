@@ -26,8 +26,8 @@ export const Movi = () => {
   const generateCells = () => {
     const objectModel = [
       // "year",
-      "skateMen",
-      // "skateWomen",
+      // "skateMen",
+      "skateWomen",
       // "miniRamp",
       // "bmxParkMen",
       // "bmxParkWomen",
@@ -44,16 +44,19 @@ export const Movi = () => {
 
     return (
       <>
-        {dataReversed.map((yearResults, i) => (
-          <CellStyle key={yearResults.year}>
-            <TitleCell>{yearResults.year}</TitleCell>
-            <ImgSt
-              src={process.env.PUBLIC_URL + yearResults.skateMenPic}
-              alt="*"
-            />
-            <Name>{yearResults.skateMen}</Name>
-          </CellStyle>
-        ))}
+        {dataReversed.map(
+          (yearResults, i) =>
+            yearResults.year > 2012 && (
+              <CellStyle key={yearResults.year}>
+                <TitleCell>{yearResults.year}</TitleCell>
+                <ImgSt
+                  src={process.env.PUBLIC_URL + yearResults.skateWomenPic}
+                  alt="*"
+                />
+                <Name>{yearResults.skateWomen}</Name>
+              </CellStyle>
+            )
+        )}
       </>
     );
   };
