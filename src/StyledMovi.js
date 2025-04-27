@@ -25,19 +25,20 @@ export const ImgSt = styled.img`
 
 export const Name = styled.h4`
   word-break: normal;
-  font-size: 1em;
+  font-size: .8em;
   margin: auto;
   text-align: center;
   font-weight: 400;
+  color: lightgray;
 `;
 
-export const TitleCell = styled.h2`
+export const TitleCell = styled.h4`
   word-break: normal;
-  font-family: "Stint Ultra Condensed", cursive;
-  font-size: 3em;
+  font-family: "futura";
+  font-size: 1em;
   margin: auto;
   text-align: center;
-  color: slategrey;
+  color: lightgray;
   & h2:nth-child(19) {
     text-decoration-line: line-through;
   }
