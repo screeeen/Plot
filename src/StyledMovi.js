@@ -6,6 +6,7 @@ export const GridStyle = styled.div`
   align-items: start;
   box-sizing: border-box;
   margin: 1%;
+  // border: 1px solid black;
 `;
 
 export const ColumnStyle = styled.div`
@@ -15,62 +16,54 @@ export const ColumnStyle = styled.div`
   justify-content: space-between;
   /* background: ${(props) => (props.color % 2 ? "#FFF" : "#EFF3")}; */
   z-index: -1;
+  // border: 1px solid black;
 `;
 
 export const CellStyle = styled.div`
   display: flex;
   flex-flow: column nowrap;
-  height: 100%;
-  min-height: 60px;
-  max-height: 80px;
-  /* min-width: 10px;
-  max-width: 20px; */
-  padding: 2px;
+  justify-content: center;
+  align-items: center;
   font-size: 0.4em;
+  min-height: 120px;
+  min-width: 120px;
+  border: 1px solid black;
 
   /* YEAR */
   &:first-child {
     font-stretch: condensed;
-    justify-content: center;
-    font-family: "Stint Ultra Condensed", cursive;
+    border: none;
+    
     font-size: 1.8em;
     padding: 0px 0.1em;
     min-width: 40px;
-    color: red;
-  }
-  /* BIG */
-  @media (min-width: 768px) {
-    height: 100%;
-    min-height: 120px;
-    max-width: 50px;
-    font-size: 1em;
-    z-index: -1;
   }
 `;
+
 export const TitleCell = styled(CellStyle)`
   /* word-break: break-all; */
   word-break: normal;
   max-width: 400px;
   height: 80px;
   min-height: 120px;
-  font-family: "Stint Ultra Condensed", cursive;
   font-size: 1.2em;
+  // border: 1px solid black;
 `;
+
 export const ImgSt = styled.img`
-  max-height: 100px;
-  /* width: 100%; */
-  background-color: red;
+  height:50%;
+  width:50%;
   filter: grayscale(100%) drop-shadow(2px 2px 1px gray);
   z-index: 1;
 
-  @media (min-width: 768px) {
-    height: 100%;
-  }
+  
+  
 `;
 
 export const Name = styled.div`
-  @media (min-width: 768px) {
-    font-size: 0.6em;
+  
+    font-size: .8rem;
     z-index: 4;
-  }
+  
+    // border: 1px solid black;
 `;

@@ -16,10 +16,14 @@ export const Movi = () => {
     const rev = wins;
     setData(rev);
   }, []);
-  const generateImage = (url) =>
-    url && <ImgSt src={process.env.PUBLIC_URL + url} alt="*" />;
+  const generateImage = (url) =>{
+      const urlPic =  `${window.location.href}src/assets${url}`
+      return url && <ImgSt src={urlPic} alt="*" />
+    }
+  
   const showTooltip = (info) => console.log(info);
   const printName = (name) => name && <Name>{name}</Name>;
+
   const cell = (i, name, pic) => (
     <CellStyle key={i} color={i} onMouseOver={() => showTooltip(name)}>
       {generateImage(pic)}
@@ -71,21 +75,6 @@ export const Movi = () => {
             )}
           </ColumnStyle>
         ))}
-        <ColumnStyle color={0}>
-          <TitleCell></TitleCell>
-          <TitleCell>Skateboarding Men</TitleCell>
-          <TitleCell>Skateboarding Women</TitleCell>
-          <TitleCell>Mini Ramp</TitleCell>
-          <TitleCell>BMX Men</TitleCell>
-          <TitleCell>BMX Women</TitleCell>
-          <TitleCell>BMX Street</TitleCell>
-          <TitleCell>FlatLand BMX</TitleCell>
-          <TitleCell>MTB Downtown Men</TitleCell>
-          <TitleCell>MTB Downtown Women</TitleCell>
-          <TitleCell>FMB Dirt Jump</TitleCell>
-          <TitleCell>Break Dance</TitleCell>
-          <TitleCell>Basket 3x3</TitleCell>
-        </ColumnStyle>
       </>
     );
   };
