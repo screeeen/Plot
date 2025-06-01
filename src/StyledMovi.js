@@ -2,11 +2,11 @@ import styled from "styled-components";
 
 export const GridStyle = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   align-items: start;
   box-sizing: border-box;
   margin: 1%;
-  // border: 1px solid black;
+  
 `;
 
 export const ColumnStyle = styled.div`
@@ -25,9 +25,11 @@ export const CellStyle = styled.div`
   justify-content: center;
   align-items: center;
   font-size: 0.4em;
-  min-height: 120px;
-  min-width: 120px;
-  padding: 1rem;
+  // min-height: 60px;
+  // min-width: 60px;
+  height: 120px;
+  width: 120px;
+  // padding: 1rem;
   // border: 1px solid #00000008 ;
 
 `;

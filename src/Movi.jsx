@@ -2,13 +2,12 @@ import React, { useState, useEffect } from "react";
 import { wins } from "./data/winnersTable";
 import {
   GridStyle,
-  ColumnStyle,
   Name,
   CellStyle,
   ImgSt,
-  TitleCell,
 } from "./StyledMovi";
 import emojiFlags from "emoji-flags";
+import { objectModelStreetWomen, objectModelStreetMen, objectModelAdaptive, objectModelMiniramp } from "./CONSTANTS";
 
 export const Movi = () => {
   const [dataReversed, setData] = useState(null);
@@ -33,32 +32,77 @@ export const Movi = () => {
   
   return (
   <CellStyle key={i} color={i} onMouseOver={() => showTooltip(name)}>
+      <div style={{fontSize: '1rem',display:'flex', alignSelf:'baseline'}}>{year}</div>
       {generateImage(pic)}
       <div style={{fontSize: '1rem',display:'flex', alignSelf:'self-end'}}>{ck}</div>
       {printName(name)}
-      <div style={{fontSize: '1rem',display:'flex', alignSelf:'self-end'}}>{year}</div>
     </CellStyle>
     )
   }
   
   const generateCells = () => {
-    const objectModel = [
-      "year",
-      "skateMen",
-      "skateWomen",
-      "miniRamp",
-      "adaptiveSkate"
-    ];
-    console.log("reverseData", dataReversed);
     return (
       <>
+      
+      <div style={{display:'flex', flexFlow: 'row wrap', width:'100%'}}>
+      <h2>O Marisquiño Skateboarding Kids!</h2>
+      </div>
+
+      <div style={{display:'flex', flexFlow: 'row wrap'}}>
+        <h2>Street Men! (2001-2024)</h2>
+      </div>
+
+      <div style={{display:'flex', flexFlow: 'row wrap', width:'100%'}}>
         {dataReversed.map((yearResults, i) => (
           <div style={{display:'flex', flexFlow: 'row wrap'}}>
-            {objectModel.map((model, i) =>
+            {objectModelStreetMen.map((model, i) =>
                 cell(i, yearResults[model], yearResults[`${model}Pic`],yearResults[`${model}Country`],yearResults['year'])
             )}
           </div>
         ))}
+        </div>
+
+        <div style={{display:'flex', flexFlow: 'row wrap'}}>
+          <h2>Street Women! (2013-2024)</h2>
+        </div>
+
+        <div style={{display:'flex', flexFlow: 'row wrap', width:'100%'}}>
+        {dataReversed.map((yearResults, i) => (
+          <div style={{display:'flex', flexFlow: 'row wrap'}}>
+            {objectModelStreetWomen.map((model, i) =>
+                cell(i, yearResults[model], yearResults[`${model}Pic`],yearResults[`${model}Country`],yearResults['year'])
+            )}
+          </div>
+        ))}
+        </div>
+
+        <div style={{display:'flex', flexFlow: 'row wrap'}}>
+          <h2>Miniramp! (2016-2024)</h2>
+        </div>
+
+        <div style={{display:'flex', flexFlow: 'row wrap', width:'100%'}}>
+        {dataReversed.map((yearResults, i) => (
+          <div style={{display:'flex', flexFlow: 'row wrap'}}>
+            {objectModelMiniramp.map((model, i) =>
+                cell(i, yearResults[model], yearResults[`${model}Pic`],yearResults[`${model}Country`],yearResults['year'])
+            )}
+          </div>
+        ))}
+        </div>
+        
+        <div style={{display:'flex', flexFlow: 'row wrap', width:'100%'}}>
+          <h2>Adaptive! (2024!)</h2>
+        </div>
+
+        <div style={{display:'flex', flexFlow: 'row wrap'}}>
+        {dataReversed.map((yearResults, i) => (
+          <div style={{display:'flex', flexFlow: 'row wrap'}}>
+            {objectModelAdaptive.map((model, i) =>
+                cell(i, yearResults[model], yearResults[`${model}Pic`],yearResults[`${model}Country`],yearResults['year'])
+            )}
+          </div>
+        ))}
+        </div>
       </>
     );
   };
