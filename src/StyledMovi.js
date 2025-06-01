@@ -31,6 +31,7 @@ export const CellStyle = styled.div`
   width: 120px;
   // padding: 1rem;
   // border: 1px solid #00000008 ;
+  margin: 2rem;
 
 `;
 
@@ -45,8 +46,8 @@ export const TitleCell = styled(CellStyle)`
 `;
 
 export const ImgSt = styled.img`
-  height:50%;
-  width:50%;
+  height: 75%;
+  width: 60%;
   filter: grayscale(100%) drop-shadow(2px 2px 1px gray);
   z-index: 1;
 
