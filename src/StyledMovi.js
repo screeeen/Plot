@@ -27,7 +27,8 @@ export const CellStyle = styled.div`
   font-size: 0.4em;
   min-height: 120px;
   min-width: 120px;
-  border: 1px solid #00000008 ;
+  padding: 1rem;
+  // border: 1px solid #00000008 ;
 
   /* YEAR */
   &:first-child {

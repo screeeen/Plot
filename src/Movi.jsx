@@ -8,6 +8,7 @@ import {
   ImgSt,
   TitleCell,
 } from "./StyledMovi";
+import emojiFlags from "emoji-flags";
 
 export const Movi = () => {
   const [dataReversed, setData] = useState(null);
@@ -24,27 +25,34 @@ export const Movi = () => {
   const showTooltip = (info) => console.log(info);
   const printName = (name) => name && <Name>{name}</Name>;
 
-  const cell = (i, name, pic) => (
-    <CellStyle key={i} color={i} onMouseOver={() => showTooltip(name)}>
+  const cell = (i, name, pic,countryCode) => {   
+    if (countryCode === undefined || countryCode === '') return (<></>)
+    const ck = emojiFlags.countryCode(countryCode).emoji
+  
+  return (<CellStyle key={i} color={i} onMouseOver={() => showTooltip(name)}>
       {generateImage(pic)}
+      <div style={{fontSize: '1rem',display:'flex', alignSelf:'self-end'}}>{ck}</div>
       {printName(name)}
-    </CellStyle>
-  );
+    </CellStyle>)
+    
+  }
+  
   const generateCells = () => {
     const objectModel = [
       "year",
       "skateMen",
       "skateWomen",
       "miniRamp",
-      "bmxParkMen",
-      "bmxParkWomen",
-      "bmxStreet",
-      "flatLand",
-      "mtbDowntownMen",
-      "mtbDowntownWomen",
-      "fmbDirtJump",
-      "breakDance",
-      "basket3x3",
+      "adaptiveSkate"
+      // "bmxParkMen",
+      // "bmxParkWomen",
+      // "bmxStreet",
+      // "flatLand",
+      // "mtbDowntownMen",
+      // "mtbDowntownWomen",
+      // "fmbDirtJump",
+      // "breakDance",
+      // "basket3x3",
     ];
     console.log("reverseData", dataReversed);
     return (
@@ -54,7 +62,8 @@ export const Movi = () => {
           <TitleCell>Skateboarding Men</TitleCell>
           <TitleCell>Skateboarding Women</TitleCell>
           <TitleCell>Mini Ramp</TitleCell>
-          <TitleCell>BMX Men</TitleCell>
+          <TitleCell>Adaptive</TitleCell>
+          {/* <TitleCell>BMX Men</TitleCell>
           <TitleCell>BMX Women</TitleCell>
           <TitleCell>BMX Street</TitleCell>
           <TitleCell>FlatLand BMX</TitleCell>
@@ -62,7 +71,7 @@ export const Movi = () => {
           <TitleCell>MTB Downtown Women</TitleCell>
           <TitleCell>FMB Dirt Jump</TitleCell>
           <TitleCell>Break Dance</TitleCell>
-          <TitleCell>Basket 3x3</TitleCell>
+          <TitleCell>Basket 3x3</TitleCell> */}
         </ColumnStyle>
         {dataReversed.map((yearResults, i) => (
           <ColumnStyle color={i} key={i}>
@@ -70,7 +79,7 @@ export const Movi = () => {
               model && model === "year" ? (
                 <CellStyle key={i}>{yearResults[model]}</CellStyle>
               ) : (
-                cell(i, yearResults[model], yearResults[`${model}Pic`])
+                cell(i, yearResults[model], yearResults[`${model}Pic`],yearResults[`${model}Country`])
               )
             )}
           </ColumnStyle>
