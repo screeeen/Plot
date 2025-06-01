@@ -25,16 +25,20 @@ export const Movi = () => {
   const showTooltip = (info) => console.log(info);
   const printName = (name) => name && <Name>{name}</Name>;
 
-  const cell = (i, name, pic,countryCode) => {   
+  const cell = (i, name, pic,countryCode, year) => {   
     if (countryCode === undefined || countryCode === '') return (<></>)
     const ck = emojiFlags.countryCode(countryCode).emoji
+
+    console.log(year)
   
-  return (<CellStyle key={i} color={i} onMouseOver={() => showTooltip(name)}>
+  return (
+  <CellStyle key={i} color={i} onMouseOver={() => showTooltip(name)}>
       {generateImage(pic)}
       <div style={{fontSize: '1rem',display:'flex', alignSelf:'self-end'}}>{ck}</div>
       {printName(name)}
-    </CellStyle>)
-    
+      <div style={{fontSize: '1rem',display:'flex', alignSelf:'self-end'}}>{year}</div>
+    </CellStyle>
+    )
   }
   
   const generateCells = () => {
@@ -44,45 +48,16 @@ export const Movi = () => {
       "skateWomen",
       "miniRamp",
       "adaptiveSkate"
-      // "bmxParkMen",
-      // "bmxParkWomen",
-      // "bmxStreet",
-      // "flatLand",
-      // "mtbDowntownMen",
-      // "mtbDowntownWomen",
-      // "fmbDirtJump",
-      // "breakDance",
-      // "basket3x3",
     ];
     console.log("reverseData", dataReversed);
     return (
       <>
-        <ColumnStyle color={0}>
-          <TitleCell></TitleCell>
-          <TitleCell>Skateboarding Men</TitleCell>
-          <TitleCell>Skateboarding Women</TitleCell>
-          <TitleCell>Mini Ramp</TitleCell>
-          <TitleCell>Adaptive</TitleCell>
-          {/* <TitleCell>BMX Men</TitleCell>
-          <TitleCell>BMX Women</TitleCell>
-          <TitleCell>BMX Street</TitleCell>
-          <TitleCell>FlatLand BMX</TitleCell>
-          <TitleCell>MTB Downtown Men</TitleCell>
-          <TitleCell>MTB Downtown Women</TitleCell>
-          <TitleCell>FMB Dirt Jump</TitleCell>
-          <TitleCell>Break Dance</TitleCell>
-          <TitleCell>Basket 3x3</TitleCell> */}
-        </ColumnStyle>
         {dataReversed.map((yearResults, i) => (
-          <ColumnStyle color={i} key={i}>
+          <div style={{display:'flex', flexFlow: 'row wrap'}}>
             {objectModel.map((model, i) =>
-              model && model === "year" ? (
-                <CellStyle key={i}>{yearResults[model]}</CellStyle>
-              ) : (
-                cell(i, yearResults[model], yearResults[`${model}Pic`],yearResults[`${model}Country`])
-              )
+                cell(i, yearResults[model], yearResults[`${model}Pic`],yearResults[`${model}Country`],yearResults['year'])
             )}
-          </ColumnStyle>
+          </div>
         ))}
       </>
     );

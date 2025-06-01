@@ -30,15 +30,6 @@ export const CellStyle = styled.div`
   padding: 1rem;
   // border: 1px solid #00000008 ;
 
-  /* YEAR */
-  &:first-child {
-    font-stretch: condensed;
-    border: none;
-    
-    font-size: 1.8em;
-    padding: 0px 0.1em;
-    min-width: 40px;
-  }
 `;
 
 export const TitleCell = styled(CellStyle)`
