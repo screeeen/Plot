@@ -5,10 +5,5 @@ import { Movi } from './Movi';
 
 
 
-ReactDOM.render(
-  <React.StrictMode>
-    <Movi />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+ReactDOM.render(<Movi />, document.getElementById('root'));
 
